@@ -2,7 +2,9 @@ react-texteditable
 =====================
 
 Based off of https://github.com/lovasoa/react-contenteditable
+
 The only difference is `textContent` is being set rather than `innerHTML`
+
 This change was done to prevent XSS
 
 React component for a div with editable contents
