@@ -3,11 +3,11 @@ react-texteditable
 
 Based off of https://github.com/lovasoa/react-contenteditable
 
-The only difference is `textContent` is being set rather than `innerHTML`
+The major difference is `textContent` is being set rather than `innerHTML`
 
 This change was done to prevent XSS
 
-React component for a div with editable contents
+React component for a div with editable text content
 
 ## Usage
 ```javascript
@@ -23,9 +23,9 @@ React component for a div with editable contents
 
     render: function(){
       return <TextEditable
-                text={this.state.text} // nodeValue of the editable div
+                text={this.state.text} // textContent of the editable div
                 disabled={false}       // use true to disable edition
-                onChange={this.handleChange} // handle nodeValue change
+                onChange={this.handleChange} // handle textContent change
               />
     }
   });
