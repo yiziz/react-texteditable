@@ -33,7 +33,7 @@ export default class TextEditable extends React.Component {
   }
 
   render() {
-    const { tagName, ...props } = this.props
+    const { tagName, text, children, ...props } = this.props
 
     return React.createElement(
       tagName || 'div',
@@ -44,7 +44,7 @@ export default class TextEditable extends React.Component {
         onBlur: this.props.onBlur || this.emitChange,
         contentEditable: !this.props.disabled,
       },
-      this.props.children)
+      children)
   }
 
   shouldComponentUpdate(nextProps) {
